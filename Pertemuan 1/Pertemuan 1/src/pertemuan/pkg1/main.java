@@ -9,9 +9,10 @@ import java.util.*;
  *
  * @author inter
  */
-class Input {  
+public class main {  
+    public static double celsius, fahrenheit, reamur, kelvin;
+    
     public static void main(String[] args) {  
-        double celsius, fahrenheit, reamur, kelvin;
         int repeat=0;
         Scanner sc= new Scanner(System.in);  
 
@@ -26,9 +27,7 @@ class Input {
         System.out.print("\n");
     
         while (repeat!=3){
-            fahrenheit = celsius*9/5+32;
-            reamur = celsius*4/5;
-            kelvin = celsius+273.15;
+            Konversi();
 
             System.out.print("Opsi\n");
             System.out.print("----\n");
@@ -67,5 +66,10 @@ class Input {
             }
         }
         sc.close();
-    }  
+    }
+    static void Konversi(){
+        fahrenheit = ((9*celsius)/5)+32;
+        reamur = ((celsius*4)/5);
+        kelvin = (celsius+273.15);  
+    }
 }
