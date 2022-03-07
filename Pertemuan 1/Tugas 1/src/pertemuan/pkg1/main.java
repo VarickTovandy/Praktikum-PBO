@@ -27,7 +27,7 @@ public class main {
         System.out.print("\n");
     
         while (repeat!=3){
-            Konversi();
+            konversi.Konversi();
 
             System.out.print("Opsi\n");
             System.out.print("----\n");
@@ -66,10 +66,5 @@ public class main {
             }
         }
         sc.close();
-    }
-    static void Konversi(){
-        fahrenheit = ((9*celsius)/5)+32;
-        reamur = ((celsius*4)/5);
-        kelvin = (celsius+273.15);  
     }
 }
