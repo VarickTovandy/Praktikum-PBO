@@ -35,7 +35,7 @@ class PersegiPanjang extends Bidang{
     public void CariLuas(double p, double l) {
         System.out.println("Luas Persegi Panjang adalah = " + (p * l));
     }
-}
+}   
 
 class Lingkaran extends Bidang implements MenghitungBidang{
     @Override
@@ -59,7 +59,7 @@ class Tabung extends Ruang implements MenghitungRuang{
 
 class Tugas2 {
     public static void main(String args[]) {
-        double a, b, c, p, l, t, r;
+        double p, l, t, r;
         int ulang = 1, pilih;
         Scanner s = new Scanner(System.in);
         PersegiPanjang per = new PersegiPanjang();
