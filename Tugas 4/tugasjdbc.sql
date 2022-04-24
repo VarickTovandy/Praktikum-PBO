@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 24, 2022 at 08:52 AM
+-- Generation Time: Apr 24, 2022 at 06:15 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.10
 
@@ -18,26 +18,26 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `login`
+-- Database: `tugasjdbc`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `login`
+-- Table structure for table `users`
 --
 
-CREATE TABLE `login` (
+CREATE TABLE `users` (
   `id` varchar(50) NOT NULL,
   `username` varchar(100) DEFAULT NULL,
   `password` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `login`
+-- Dumping data for table `users`
 --
 
-INSERT INTO `login` (`id`, `username`, `password`) VALUES
+INSERT INTO `users` (`id`, `username`, `password`) VALUES
 ('1', 'test', 'test'),
 ('2', 'test2', 'test2');
 
@@ -46,9 +46,9 @@ INSERT INTO `login` (`id`, `username`, `password`) VALUES
 --
 
 --
--- Indexes for table `login`
+-- Indexes for table `users`
 --
-ALTER TABLE `login`
+ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 COMMIT;
 

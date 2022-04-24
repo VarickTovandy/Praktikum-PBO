@@ -31,11 +31,11 @@ public class Register extends javax.swing.JFrame {
         try{
             Connection c = Koneksi.getKoneksi();
             Statement s = c.createStatement();
-            String sql = "SELECT MAX(id) FROM login";
+            String sql = "SELECT MAX(id) FROM users";
             ResultSet r = s.executeQuery(sql);  
             if (r.next()) {
                 int a = r.getInt(1);
-                txID.setText(Integer.toString(a+1));
+                    txID.setText(Integer.toString(a+1));
             }
             r.close();
             s.close();
@@ -188,13 +188,13 @@ public class Register extends javax.swing.JFrame {
         // TODO add your handling code here:
         String id = txID.getText().toString().trim();
         String username = txUsername.getText().toString().trim();
-        String password = txUsername.getText().toString().trim();
-        String conPassword = txUsername.getText().toString().trim();
+        String password = txPassword.getText().toString().trim();
+        String conPassword = txConPassword.getText().toString().trim();
         
         try{
             Connection c = Koneksi.getKoneksi();
             Statement s = c.createStatement(); 
-            PreparedStatement sql = c.prepareStatement("SELECT * FROM login WHERE username = ?");
+            PreparedStatement sql = c.prepareStatement("SELECT * FROM users WHERE username = ?");
             sql.setString(1, username);
             ResultSet r = sql.executeQuery();
             if (r.next()) {
@@ -203,10 +203,10 @@ public class Register extends javax.swing.JFrame {
                 if(!password.equals(conPassword)){
                     JOptionPane.showMessageDialog(null, "Password tidak pas");
                 }else if(password.equals("") || username.equals("")){
-                    JOptionPane.showMessageDialog(null, "Username or Password tidak bisa kosong!");
+                    JOptionPane.showMessageDialog(null, "Username atau Password tidak bisa kosong!");
                 }else{
                     try{
-                        String sql2 = "INSERT INTO Login Values (?, ?, ?)";
+                        String sql2 = "INSERT INTO users Values (?, ?, ?)";
                         PreparedStatement p = c.prepareStatement(sql2);
                         p.setString(1, id);
                         p.setString(2, username);

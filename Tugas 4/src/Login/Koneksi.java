@@ -9,14 +9,14 @@ import java.sql.DriverManager;
 /**
  *
  * @author inter
- */
+ */ 
 public class Koneksi {
     private static java.sql.Connection koneksi;
     
     public static java.sql.Connection getKoneksi(){
         if (koneksi == null){
             try{
-                String url = "jdbc:mysql://localhost:3306/Login";
+                String url = "jdbc:mysql://localhost:3306/tugasjdbc";
                 String user = "root";
                 String password = "";
                 DriverManager.registerDriver(new com.mysql.jdbc.Driver());
