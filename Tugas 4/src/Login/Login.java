@@ -158,7 +158,7 @@ public class Login extends javax.swing.JFrame {
             Connection c = Koneksi.getKoneksi();
             Statement s = c.createStatement();
             
-            String sql = "SELECT * FROM login WHERE Username='" + txUsername.getText()
+            String sql = "SELECT * FROM users WHERE Username='" + txUsername.getText()
                     + "' and Password='" + txPassword.getText() + "'";
             ResultSet r = s.executeQuery(sql);
             
