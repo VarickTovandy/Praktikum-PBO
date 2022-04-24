@@ -35,7 +35,7 @@ public class Register extends javax.swing.JFrame {
             ResultSet r = s.executeQuery(sql);  
             if (r.next()) {
                 int a = r.getInt(1);
-                    txID.setText(Integer.toString(a+1));
+                txID.setText(Integer.toString(a+1));
             }
             r.close();
             s.close();
